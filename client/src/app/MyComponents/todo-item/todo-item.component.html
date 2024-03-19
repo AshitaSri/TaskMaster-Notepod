@@ -1,0 +1,18 @@
+<div class="my-3" *ngIf="todo">
+  <h5 [ngClass]="{'strike': !todo.active && !isEditing}" *ngIf="!isEditing">{{ todo.title }}</h5>
+  <input *ngIf="isEditing" type="text" [(ngModel)]="editedTitle" class="form-control">
+  
+  <p [ngClass]="{'strike': !todo.active && !isEditing}" *ngIf="!isEditing">{{ todo.desc }}</p>
+  <input *ngIf="isEditing" type="text" [(ngModel)]="editedDesc" class="form-control">
+  
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="todo{{i}}" (click)="onCheckboxClick(todo)" [checked]="!todo.active">
+    <label class="form-check-label" for="todo{{i}}">Done</label>
+    
+    <button class="btn btn-sm btn-primary" (click)="isEditing ? updateTodo() : toggleEditMode()">
+      {{ isEditing ? 'Update' : 'Edit' }}
+    </button>
+    
+    <button class="btn btn-sm btn-danger" (click)="onClick(todo)">Delete</button>
+  </div>
+</div>
