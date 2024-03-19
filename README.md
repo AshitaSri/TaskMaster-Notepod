@@ -1,6 +1,4 @@
-Below is a basic README file for your Angular application. You can customize it further based on additional details about your project:
 
----
 
 # TaskMaster Notepod
 
