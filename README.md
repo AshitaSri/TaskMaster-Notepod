@@ -1,6 +1,6 @@
 
 
-# TaskMaster Notepod
+# TaskMaster Notepod - TODO LIST APP with MEAN Stack
 
 TaskMaster Notepod is a web application built using Angular for the frontend.
 
